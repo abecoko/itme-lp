@@ -1,0 +1,142 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Open Sans", "Noto Sans JP", Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* Image Styles */
+.lp-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Q&A Section */
+.qa-section {
+    background-color: #8ed1fc;
+    padding: 40px 20px;
+}
+
+.qa-header {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.qa-header .qa-subtitle {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.qa-header .qa-title {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Q&A Item */
+.qa-item {
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.qa-inner {
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 6px;
+    padding: 20px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.qa-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.qa-row:last-child {
+    margin-bottom: 0;
+}
+
+.qa-badge {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #8ed1fc;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.qa-text {
+    flex: 1;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.8;
+    display: flex;
+    align-items: center;
+}
+
+.qa-question .qa-text {
+    font-weight: 500;
+}
+
+.qa-divider {
+    border: none;
+    border-top: 2px solid #8ed1fc;
+    margin: 15px 0;
+    opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .qa-header .qa-title {
+        font-size: 40px;
+    }
+
+    .qa-header .qa-subtitle {
+        font-size: 16px;
+    }
+
+    .qa-inner {
+        padding: 15px;
+        margin: 10px;
+        min-height: auto;
+    }
+
+    .qa-badge {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
+
+    .qa-text {
+        font-size: 14px;
+    }
+}
