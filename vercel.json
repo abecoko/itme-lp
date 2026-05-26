@@ -1,7 +1,8 @@
 {
-  "redirects": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
     {
-      "source": "/business",
+      "src": "/",
       "has": [
         {
           "type": "query",
@@ -9,36 +10,10 @@
           "value": "(?<partner>b\\d+)"
         }
       ],
-      "destination": "/?p=:partner",
-      "permanent": false
+      "dest": "/business/index.html"
     },
     {
-      "source": "/business/",
-      "has": [
-        {
-          "type": "query",
-          "key": "p",
-          "value": "(?<partner>b\\d+)"
-        }
-      ],
-      "destination": "/?p=:partner",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "p",
-          "value": "(?<partner>b\\d+)"
-        }
-      ],
-      "destination": "/business/index.html?p=:partner"
-    },
-    {
-      "source": "/",
+      "src": "/",
       "has": [
         {
           "type": "query",
@@ -46,7 +21,10 @@
           "value": "(?<partner>b\\d+)"
         }
       ],
-      "destination": "/business/index.html?p=:partner"
+      "dest": "/business/index.html"
+    },
+    {
+      "handle": "filesystem"
     }
   ]
 }
