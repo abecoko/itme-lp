@@ -1,0 +1,36 @@
+{
+  "redirects": [
+    {
+      "source": "/business",
+      "has": [
+        { "type": "query", "key": "p", "value": "(?<partner>b\\d+)" }
+      ],
+      "destination": "/?p=:partner",
+      "permanent": false
+    },
+    {
+      "source": "/business/",
+      "has": [
+        { "type": "query", "key": "p", "value": "(?<partner>b\\d+)" }
+      ],
+      "destination": "/?p=:partner",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        { "type": "query", "key": "p", "value": "(?<partner>b\\d+)" }
+      ],
+      "destination": "/business/?p=:partner"
+    },
+    {
+      "source": "/",
+      "has": [
+        { "type": "query", "key": "partner", "value": "(?<partner>b\\d+)" }
+      ],
+      "destination": "/business/?p=:partner"
+    }
+  ]
+}
