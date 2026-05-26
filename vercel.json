@@ -3,7 +3,11 @@
     {
       "source": "/business",
       "has": [
-        { "type": "query", "key": "p", "value": "(?<partner>b\\d+)" }
+        {
+          "type": "query",
+          "key": "p",
+          "value": "(?<partner>b\\d+)"
+        }
       ],
       "destination": "/?p=:partner",
       "permanent": false
@@ -11,7 +15,11 @@
     {
       "source": "/business/",
       "has": [
-        { "type": "query", "key": "p", "value": "(?<partner>b\\d+)" }
+        {
+          "type": "query",
+          "key": "p",
+          "value": "(?<partner>b\\d+)"
+        }
       ],
       "destination": "/?p=:partner",
       "permanent": false
@@ -21,16 +29,24 @@
     {
       "source": "/",
       "has": [
-        { "type": "query", "key": "p", "value": "(?<partner>b\\d+)" }
+        {
+          "type": "query",
+          "key": "p",
+          "value": "(?<partner>b\\d+)"
+        }
       ],
-      "destination": "/business/?p=:partner"
+      "destination": "/business/index.html?p=:partner"
     },
     {
       "source": "/",
       "has": [
-        { "type": "query", "key": "partner", "value": "(?<partner>b\\d+)" }
+        {
+          "type": "query",
+          "key": "partner",
+          "value": "(?<partner>b\\d+)"
+        }
       ],
-      "destination": "/business/?p=:partner"
+      "destination": "/business/index.html?p=:partner"
     }
   ]
 }
